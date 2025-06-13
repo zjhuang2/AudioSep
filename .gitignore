@@ -1,0 +1,18 @@
+# Checkpoint files
+checkpoint/audiosep_base_4M_steps.ckpt
+checkpoint/music_speech_audioset_epoch_15_esc_89.98.pt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Output files
+separated_audio.wav
+*.wav
+
+# Temporary files
+.DS_Store
+*.swp
+*.swo
+*~
