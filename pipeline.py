@@ -44,6 +44,41 @@ def separate_audio(model, audio_file, text, output_file, device='cuda', use_chun
         write(output_file, 32000, np.round(sep_segment * 32767).astype(np.int16))
         print(f'Separated audio written to [{output_file}]')
 
+def remove_audio(model, audio_file, text, output_file, device='cuda', use_chunk=False):
+    print(f'Removing audio from [{audio_file}] with textual query: [{text}]')
+    mixture, fs = librosa.load(audio_file, sr=32000, mono=True)
+    with torch.no_grad():
+        text = [text]
+
+        conditions = model.query_encoder.get_query_embed(
+            modality='text',
+            text=text,
+            device=device
+        )
+
+        input_dict = {
+            "mixture": torch.Tensor(mixture)[None, None, :].to(device),
+            "condition": conditions,
+        } 
+
+        if use_chunk:
+            sep_segment = model.ss_model.chunk_inference(input_dict)
+            sep_segment = np.squeeze(sep_segment)
+        else:
+            sep_segment = model.ss_model(input_dict)["waveform"]
+            sep_segment = sep_segment.squeeze(0).squeeze(0).data.cpu().numpy()
+
+        # Subtract the separated audio from the original mixture
+        removed_audio = mixture - sep_segment
+        
+        # Normalize to prevent clipping
+        max_val = np.max(np.abs(removed_audio))
+        if max_val > 1.0:
+            removed_audio = removed_audio / max_val
+
+        write(output_file, 32000, np.round(removed_audio * 32767).astype(np.int16))
+        print(f'Audio with [{text}] removed written to [{output_file}]')
+
 if __name__ == '__main__':
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model = build_audiosep(
