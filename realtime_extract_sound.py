@@ -54,6 +54,10 @@ class RealtimeSoundExtractor:
         # Window for smooth transitions
         self.window = signal.windows.hann(self.chunk_size)
         
+        # Quality metrics
+        self.snr_history = deque(maxlen=50)
+        self.energy_ratio_history = deque(maxlen=50)
+        
     def audio_callback(self, indata, outdata, frames, time, status):
         """Callback for sounddevice stream"""
         if status:
@@ -72,6 +76,7 @@ class RealtimeSoundExtractor:
             
     def process_audio_chunk(self, audio_chunk):
         """Process a single chunk of audio to extract target sound"""
+        start_time = time.time()
         with torch.no_grad():
             # Prepare input
             audio_tensor = torch.Tensor(audio_chunk)[None, None, :].to(self.device)
@@ -89,6 +94,31 @@ class RealtimeSoundExtractor:
             max_val = np.max(np.abs(extracted_audio))
             if max_val > 0.9:
                 extracted_audio = extracted_audio * 0.9 / max_val
+            
+            # Calculate quality metrics
+            # SNR between extracted and original
+            signal_power = np.mean(extracted_audio ** 2)
+            noise_power = np.mean((audio_chunk - extracted_audio) ** 2)
+            if noise_power > 0:
+                snr_db = 10 * np.log10(signal_power / noise_power)
+            else:
+                snr_db = float('inf')
+            
+            # Energy ratio (how much energy was extracted)
+            energy_ratio = signal_power / (np.mean(audio_chunk ** 2) + 1e-10)
+            
+            # Store metrics
+            if not np.isnan(snr_db) and not np.isinf(snr_db):
+                self.snr_history.append(snr_db)
+            self.energy_ratio_history.append(energy_ratio)
+            
+            # Print metrics
+            latency_ms = (time.time() - start_time) * 1000
+            avg_snr = np.mean(list(self.snr_history)) if self.snr_history else 0
+            avg_energy = np.mean(list(self.energy_ratio_history)) * 100
+            
+            print(f"\rLatency: {latency_ms:.1f}ms | SNR: {avg_snr:.1f}dB | Extracted: {avg_energy:.0f}%", 
+                  end="", flush=True)
                 
             return extracted_audio
             

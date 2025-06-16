@@ -150,8 +150,8 @@ class AudioSepGUI:
                 model=self.model,
                 text_query=sound_description,
                 device=self.device,
-                chunk_duration=2.0,
-                overlap=0.5
+                chunk_duration=0.5,
+                overlap=0.1
             )
             action = "Extracting"
         else:
@@ -159,8 +159,8 @@ class AudioSepGUI:
                 model=self.model,
                 text_query=sound_description,
                 device=self.device,
-                chunk_duration=2.0,
-                overlap=0.5
+                chunk_duration=0.5,
+                overlap=0.1
             )
             action = "Removing"
         
