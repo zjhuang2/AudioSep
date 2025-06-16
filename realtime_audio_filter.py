@@ -182,12 +182,45 @@ class RealtimeAudioFilter:
         self.processing_thread = threading.Thread(target=self.processing_loop)
         self.processing_thread.start()
         
-        # Start audio stream
+        # List available audio devices
+        print("\nAvailable audio devices:")
+        devices = sd.query_devices()
+        for i, device in enumerate(devices):
+            print(f"{i}: {device['name']} - {device['max_input_channels']} in, {device['max_output_channels']} out")
+        
+        # Find laptop microphone (usually built-in)
+        input_device = None
+        output_device = None
+        
+        for i, device in enumerate(devices):
+            device_name = device['name'].lower()
+            # Look for built-in microphone
+            if device['max_input_channels'] > 0 and ('built-in' in device_name or 'internal' in device_name or 'macbook' in device_name):
+                if input_device is None:  # Use first match
+                    input_device = i
+            # Look for AirPods for output
+            elif device['max_output_channels'] > 0 and 'airpods' in device_name:
+                if output_device is None:  # Use first match
+                    output_device = i
+        
+        # Fallback to default devices if not found
+        if input_device is None:
+            input_device = sd.default.device[0]
+        if output_device is None:
+            output_device = sd.default.device[1]
+        
+        print(f"\n=== Audio Device Configuration ===")
+        print(f"INPUT:  Device #{input_device} - {devices[input_device]['name'] if input_device is not None else 'Default'}")
+        print(f"OUTPUT: Device #{output_device} - {devices[output_device]['name'] if output_device is not None else 'Default'}")
+        print(f"==================================\n")
+        
+        # Start audio stream with separate devices
         self.stream = sd.Stream(samplerate=self.sample_rate,
                                channels=1,
                                callback=self.audio_callback,
                                blocksize=self.hop_size,
-                               dtype='float32')
+                               dtype='float32',
+                               device=(input_device, output_device))
         self.stream.start()
         
         # Keep running until stop is called
