@@ -183,14 +183,17 @@ class RealtimeAudioFilter:
         self.processing_thread.start()
         
         # Start audio stream
+        self.stream = sd.Stream(samplerate=self.sample_rate,
+                               channels=1,
+                               callback=self.audio_callback,
+                               blocksize=self.hop_size,
+                               dtype='float32')
+        self.stream.start()
+        
+        # Keep running until stop is called
         try:
-            with sd.Stream(samplerate=self.sample_rate,
-                          channels=1,
-                          callback=self.audio_callback,
-                          blocksize=self.hop_size,
-                          dtype='float32'):
-                while True:
-                    time.sleep(0.1)
+            while not self.stop_processing.is_set():
+                time.sleep(0.1)
         except KeyboardInterrupt:
             print("\nStopping audio filter...")
         finally:
@@ -199,9 +202,17 @@ class RealtimeAudioFilter:
     def stop(self):
         """Stop audio processing"""
         self.stop_processing.set()
+        if hasattr(self, 'stream') and self.stream:
+            self.stream.stop()
+            self.stream.close()
         if self.processing_thread:
             self.processing_thread.join()
-        print("Audio filter stopped.")
+        # Clear queues
+        while not self.input_queue.empty():
+            self.input_queue.get()
+        while not self.output_queue.empty():
+            self.output_queue.get()
+        print("\nAudio filter stopped.")
 
 
 def main():

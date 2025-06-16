@@ -186,6 +186,7 @@ class AudioSepGUI:
     def stop_processing(self):
         if self.processor:
             self.processor.stop()
+            self.processor = None  # Clear the processor reference
         
         # Re-enable controls
         self.sound_entry.config(state="normal")
