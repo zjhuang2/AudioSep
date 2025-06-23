@@ -55,7 +55,7 @@ class RealtimeSoundExtractor:
         self.window = signal.windows.hann(self.chunk_size)
         
         # Quality metrics
-        self.snr_history = deque(maxlen=50)
+        self.snri_history = deque(maxlen=50)
         self.energy_ratio_history = deque(maxlen=50)
         
     def audio_callback(self, indata, outdata, frames, time, status):
@@ -96,28 +96,28 @@ class RealtimeSoundExtractor:
                 extracted_audio = extracted_audio * 0.9 / max_val
             
             # Calculate quality metrics
-            # SNR between extracted and original
-            signal_power = np.mean(extracted_audio ** 2)
-            noise_power = np.mean((audio_chunk - extracted_audio) ** 2)
-            if noise_power > 0:
-                snr_db = 10 * np.log10(signal_power / noise_power)
+            # SNRi: Intrusive SNR comparing extracted to original
+            extracted_power = np.mean(extracted_audio ** 2)
+            difference_power = np.mean((audio_chunk - extracted_audio) ** 2)
+            if difference_power > 0:
+                snri_db = 10 * np.log10(extracted_power / difference_power)
             else:
-                snr_db = float('inf')
+                snri_db = float('inf')
             
             # Energy ratio (how much energy was extracted)
-            energy_ratio = signal_power / (np.mean(audio_chunk ** 2) + 1e-10)
+            energy_ratio = extracted_power / (np.mean(audio_chunk ** 2) + 1e-10)
             
             # Store metrics
-            if not np.isnan(snr_db) and not np.isinf(snr_db):
-                self.snr_history.append(snr_db)
+            if not np.isnan(snri_db) and not np.isinf(snri_db):
+                self.snri_history.append(snri_db)
             self.energy_ratio_history.append(energy_ratio)
             
             # Print metrics
             latency_ms = (time.time() - start_time) * 1000
-            avg_snr = np.mean(list(self.snr_history)) if self.snr_history else 0
+            avg_snri = np.mean(list(self.snri_history)) if self.snri_history else 0
             avg_energy = np.mean(list(self.energy_ratio_history)) * 100
             
-            print(f"\rLatency: {latency_ms:.1f}ms | SNR: {avg_snr:.1f}dB | Extracted: {avg_energy:.0f}%", 
+            print(f"\rLatency: {latency_ms:.1f}ms | SNRi: {avg_snri:.1f}dB | Extracted: {avg_energy:.0f}%", 
                   end="", flush=True)
                 
             return extracted_audio

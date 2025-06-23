@@ -16,3 +16,6 @@ separated_audio.wav
 *.swp
 *.swo
 *~
+
+# API keys and secrets
+secret_keys.py

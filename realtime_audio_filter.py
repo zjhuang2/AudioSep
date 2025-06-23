@@ -55,7 +55,7 @@ class RealtimeAudioFilter:
         self.window = signal.windows.hann(self.chunk_size)
         
         # Quality metrics
-        self.snr_history = deque(maxlen=50)
+        self.snri_history = deque(maxlen=50)
         self.suppression_history = deque(maxlen=50)
         
     def audio_callback(self, indata, outdata, frames, time, status):
@@ -99,28 +99,29 @@ class RealtimeAudioFilter:
                 filtered_audio = filtered_audio * 0.9 / max_val
             
             # Calculate quality metrics
-            # SNR of filtered output
-            signal_power = np.mean(filtered_audio ** 2)
-            removed_power = np.mean(sep_audio ** 2)
-            if removed_power > 0:
-                snr_db = 10 * np.log10(signal_power / removed_power)
+            # SNRi: Intrusive SNR comparing processed to original
+            processed_power = np.mean(filtered_audio ** 2)
+            difference_power = np.mean((audio_chunk - filtered_audio) ** 2)
+            if difference_power > 0:
+                snri_db = 10 * np.log10(processed_power / difference_power)
             else:
-                snr_db = float('inf')
+                snri_db = float('inf')
             
             # Suppression ratio (how much was removed)
+            removed_power = np.mean(sep_audio ** 2)
             suppression_ratio = removed_power / (np.mean(audio_chunk ** 2) + 1e-10)
             
             # Store metrics
-            if not np.isnan(snr_db) and not np.isinf(snr_db):
-                self.snr_history.append(snr_db)
+            if not np.isnan(snri_db) and not np.isinf(snri_db):
+                self.snri_history.append(snri_db)
             self.suppression_history.append(suppression_ratio)
             
             # Print metrics
             latency_ms = (time.time() - start_time) * 1000
-            avg_snr = np.mean(list(self.snr_history)) if self.snr_history else 0
+            avg_snri = np.mean(list(self.snri_history)) if self.snri_history else 0
             avg_suppression = np.mean(list(self.suppression_history)) * 100
             
-            print(f"\rLatency: {latency_ms:.1f}ms | SNR: {avg_snr:.1f}dB | Removed: {avg_suppression:.0f}%", 
+            print(f"\rLatency: {latency_ms:.1f}ms | SNRi: {avg_snri:.1f}dB | Removed: {avg_suppression:.0f}%", 
                   end="", flush=True)
                 
             return filtered_audio
