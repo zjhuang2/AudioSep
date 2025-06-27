@@ -26,6 +26,7 @@ import webbrowser
 from urllib.parse import urlencode, parse_qs, urlparse
 import threading
 from http.server import HTTPServer, BaseHTTPRequestHandler
+import random
 try:
     from secret_keys import FREESOUND_API_KEY, FREESOUND_CLIENT_ID, FREESOUND_CLIENT_SECRET
 except ImportError:
@@ -198,11 +199,14 @@ def download_from_freesound(api_key, query, num_sounds=50, output_dir="finetune_
         page = 1
         page_size = 50  # Max allowed by Freesound API
         
-        while len(all_results) < num_sounds:
+        # Fetch more results than needed to allow for diversity
+        target_results = min(num_sounds * 3, 300)  # Get 3x more for diversity
+        
+        while len(all_results) < target_results:
             search_url = "https://freesound.org/apiv2/search/text/"
             params = {
                 'query': query,
-                'fields': 'id,name,description,duration,download',
+                'fields': 'id,name,username,description,duration,download',  # Added username
                 'page_size': page_size,
                 'page': page
             }
@@ -231,7 +235,27 @@ def download_from_freesound(api_key, query, num_sounds=50, output_dir="finetune_
             page += 1
             time.sleep(0.2)  # Be respectful to the API
         
-        results = all_results[:num_sounds]  # Limit to requested number
+        # Shuffle for diversity
+        random.shuffle(all_results)
+        
+        # Filter to get diverse sounds (limit sounds per uploader)
+        seen_uploaders = {}
+        max_per_uploader = 10  # Max sounds from same person
+        diverse_results = []
+        
+        for sound in all_results:
+            uploader = getattr(sound, 'username', 'unknown')
+            if uploader not in seen_uploaders:
+                seen_uploaders[uploader] = 0
+            
+            if seen_uploaders[uploader] < max_per_uploader:
+                diverse_results.append(sound)
+                seen_uploaders[uploader] += 1
+                
+            if len(diverse_results) >= num_sounds:
+                break
+        
+        results = diverse_results
     else:
         results = client.text_search(query=query, fields="id,name,description,duration,download")
     

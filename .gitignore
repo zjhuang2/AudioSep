@@ -19,3 +19,10 @@ separated_audio.wav
 
 # API keys and secrets
 secret_keys.py
+freesound_token.json
+
+# training dataset
+finetune_dataset
+
+# freesound-python repo
+freesound-python
