@@ -1,0 +1,714 @@
+[
+  {
+    "sound": "chewing",
+    "contexts": {
+      "quiet": [
+        {
+          "sound": "chewing",
+          "context": "quiet",
+          "queries_tested": [
+            "chewing",
+            "eating",
+            "munching"
+          ],
+          "evaluations": [
+            {
+              "query": "chewing",
+              "context": "quiet",
+              "snr_db": null,
+              "separation_metrics": {
+                "sdr": 0.5655003650121919,
+                "sdr_improvement": -73.64516693246325,
+                "sisdr": -8.50098192691803,
+                "sisdr_improvement": -107.00005114078522,
+                "mse": 0.0023148171603679657,
+                "correlation": 0.3517757783544049
+              },
+              "elimination_metrics": {
+                "target_residual_correlation": 0.9499477321823089,
+                "energy_reduction_ratio": 0.12512147426605225,
+                "spectral_difference": 0.028442369208717788
+              },
+              "success": true
+            },
+            {
+              "query": "eating",
+              "context": "quiet",
+              "snr_db": null,
+              "separation_metrics": {
+                "sdr": 7.027045382832222,
+                "sdr_improvement": -67.18362191464323,
+                "sisdr": 7.384975552558899,
+                "sisdr_improvement": -91.11409366130829,
+                "mse": 0.0005228320369496942,
+                "correlation": 0.9195620950383672
+              },
+              "elimination_metrics": {
+                "target_residual_correlation": 0.7793123061904857,
+                "energy_reduction_ratio": 0.80173359811306,
+                "spectral_difference": 0.1479056313212772
+              },
+              "success": true
+            },
+            {
+              "query": "munching",
+              "context": "quiet",
+              "snr_db": null,
+              "separation_metrics": {
+                "sdr": 0.5692967249566385,
+                "sdr_improvement": -73.64137057251881,
+                "sisdr": -8.49302589893341,
+                "sisdr_improvement": -106.9920951128006,
+                "mse": 0.0023127945605665445,
+                "correlation": 0.35205830517303
+              },
+              "elimination_metrics": {
+                "target_residual_correlation": 0.947295634160576,
+                "energy_reduction_ratio": 0.12595456838607788,
+                "spectral_difference": 0.029768886073815892
+              },
+              "success": true
+            }
+          ]
+        },
+        {
+          "sound": "chewing",
+          "context": "quiet",
+          "queries_tested": [
+            "chewing",
+            "eating",
+            "munching"
+          ],
+          "evaluations": [
+            {
+              "query": "chewing",
+              "context": "quiet",
+              "snr_db": null,
+              "separation_metrics": {
+                "sdr": 0.9116263338437474,
+                "sdr_improvement": -64.79602915159904,
+                "sisdr": -4.872040748596191,
+                "sisdr_improvement": -94.86809253692627,
+                "mse": 0.00030171917751431465,
+                "correlation": 0.4956556149488029
+              },
+              "elimination_metrics": {
+                "target_residual_correlation": 0.9684556679317029,
+                "energy_reduction_ratio": 0.18939745426177979,
+                "spectral_difference": 0.018419940901609366
+              },
+              "success": true
+            },
+            {
+              "query": "eating",
+              "context": "quiet",
+              "snr_db": null,
+              "separation_metrics": {
+                "sdr": 0.41609791975986793,
+                "sdr_improvement": -65.29155756568292,
+                "sisdr": -9.413400292396545,
+                "sisdr_improvement": -99.40945208072662,
+                "mse": 0.00033818610245361924,
+                "correlation": 0.3204791698285673
+              },
+              "elimination_metrics": {
+                "target_residual_correlation": 0.9771306248489801,
+                "energy_reduction_ratio": 0.0914183259010315,
+                "spectral_difference": 0.01400886823807379
+              },
+              "success": true
+            },
+            {
+              "query": "munching",
+              "context": "quiet",
+              "snr_db": null,
+              "separation_metrics": {
+                "sdr": 0.14262538643617534,
+                "sdr_improvement": -65.5650300990066,
+                "sisdr": -14.301071166992188,
+                "sisdr_improvement": -104.29712295532227,
+                "mse": 0.00036016624653711915,
+                "correlation": 0.18924696188547524
+              },
+              "elimination_metrics": {
+                "target_residual_correlation": 0.9915407958020519,
+                "energy_reduction_ratio": 0.03236687183380127,
+                "spectral_difference": 0.004905805609615288
+              },
+              "success": true
+            }
+          ]
+        }
+      ],
+      "single_noise": [
+        {
+          "sound": "chewing",
+          "context": "single_noise",
+          "queries_tested": [
+            "chewing",
+            "eating",
+            "munching"
+          ],
+          "evaluations": []
+        },
+        {
+          "sound": "chewing",
+          "context": "single_noise",
+          "queries_tested": [
+            "chewing",
+            "eating",
+            "munching"
+          ],
+          "evaluations": []
+        }
+      ],
+      "multiple_noises": [
+        {
+          "sound": "chewing",
+          "context": "multiple_noises",
+          "queries_tested": [
+            "chewing",
+            "eating",
+            "munching"
+          ],
+          "evaluations": []
+        },
+        {
+          "sound": "chewing",
+          "context": "multiple_noises",
+          "queries_tested": [
+            "chewing",
+            "eating",
+            "munching"
+          ],
+          "evaluations": []
+        }
+      ]
+    }
+  },
+  {
+    "sound": "snoring",
+    "contexts": {
+      "quiet": [
+        {
+          "sound": "snoring",
+          "context": "quiet",
+          "queries_tested": [
+            "snoring",
+            "sleep breathing"
+          ],
+          "evaluations": [
+            {
+              "query": "snoring",
+              "context": "quiet",
+              "snr_db": null,
+              "separation_metrics": {
+                "sdr": 0.5162498945189137,
+                "sdr_improvement": -51.344484579113185,
+                "sisdr": -8.517236113548279,
+                "sisdr_improvement": -84.66637074947357,
+                "mse": 1.3628512533614412e-05,
+                "correlation": 0.3512052026963615
+              },
+              "elimination_metrics": {
+                "target_residual_correlation": 0.9698994266021368,
+                "energy_reduction_ratio": 0.11214768886566162,
+                "spectral_difference": 0.03629084310632025
+              },
+              "success": true
+            },
+            {
+              "query": "sleep breathing",
+              "context": "quiet",
+              "snr_db": null,
+              "separation_metrics": {
+                "sdr": 1.7709682898252497,
+                "sdr_improvement": -50.08976618380685,
+                "sisdr": -2.6015791296958923,
+                "sisdr_improvement": -78.75071376562119,
+                "mse": 1.0208845196757466e-05,
+                "correlation": 0.5954618138842702
+              },
+              "elimination_metrics": {
+                "target_residual_correlation": 0.8938659586303126,
+                "energy_reduction_ratio": 0.33490198850631714,
+                "spectral_difference": 0.11511590857161424
+              },
+              "success": true
+            }
+          ]
+        },
+        {
+          "sound": "snoring",
+          "context": "quiet",
+          "queries_tested": [
+            "snoring",
+            "sleep breathing"
+          ],
+          "evaluations": [
+            {
+              "query": "snoring",
+              "context": "quiet",
+              "snr_db": null,
+              "separation_metrics": {
+                "sdr": 22.77115631614377,
+                "sdr_improvement": -45.56212372589016,
+                "sisdr": 22.81932830810547,
+                "sisdr_improvement": -69.8023509979248,
+                "mse": 3.5992529774375726e-06,
+                "correlation": 0.9973978825422265
+              },
+              "elimination_metrics": {
+                "target_residual_correlation": 0.19806414223156282,
+                "energy_reduction_ratio": 0.99471788527444,
+                "spectral_difference": 0.24600235848937924
+              },
+              "success": true
+            },
+            {
+              "query": "sleep breathing",
+              "context": "quiet",
+              "snr_db": null,
+              "separation_metrics": {
+                "sdr": 15.47089483949815,
+                "sdr_improvement": -52.86238520253578,
+                "sisdr": 15.517902374267578,
+                "sisdr_improvement": -77.1037769317627,
+                "mse": 1.9330296709085815e-05,
+                "correlation": 0.9862551418641874
+              },
+              "elimination_metrics": {
+                "target_residual_correlation": 0.35367292257342503,
+                "energy_reduction_ratio": 0.9716302957385778,
+                "spectral_difference": 0.2406151959879691
+              },
+              "success": true
+            }
+          ]
+        }
+      ],
+      "single_noise": [
+        {
+          "sound": "snoring",
+          "context": "single_noise",
+          "queries_tested": [
+            "snoring",
+            "sleep breathing"
+          ],
+          "evaluations": []
+        },
+        {
+          "sound": "snoring",
+          "context": "single_noise",
+          "queries_tested": [
+            "snoring",
+            "sleep breathing"
+          ],
+          "evaluations": []
+        }
+      ],
+      "multiple_noises": [
+        {
+          "sound": "snoring",
+          "context": "multiple_noises",
+          "queries_tested": [
+            "snoring",
+            "sleep breathing"
+          ],
+          "evaluations": []
+        },
+        {
+          "sound": "snoring",
+          "context": "multiple_noises",
+          "queries_tested": [
+            "snoring",
+            "sleep breathing"
+          ],
+          "evaluations": []
+        }
+      ]
+    }
+  },
+  {
+    "sound": "keyboard_typing",
+    "contexts": {
+      "quiet": [
+        {
+          "sound": "keyboard_typing",
+          "context": "quiet",
+          "queries_tested": [
+            "keyboard typing",
+            "typing",
+            "keyboard sounds"
+          ],
+          "evaluations": [
+            {
+              "query": "keyboard typing",
+              "context": "quiet",
+              "snr_db": null,
+              "separation_metrics": {
+                "sdr": 27.04997143248719,
+                "sdr_improvement": -45.42227090515362,
+                "sisdr": 27.353219985961914,
+                "sisdr_improvement": -69.40742492675781,
+                "mse": 3.485195065877633e-06,
+                "correlation": 0.9990815740001003
+              },
+              "elimination_metrics": {
+                "target_residual_correlation": 0.3034586081038884,
+                "energy_reduction_ratio": 0.998028434580192,
+                "spectral_difference": 0.6988448320163458
+              },
+              "success": true
+            },
+            {
+              "query": "typing",
+              "context": "quiet",
+              "snr_db": null,
+              "separation_metrics": {
+                "sdr": 23.27881128352949,
+                "sdr_improvement": -49.193431054111315,
+                "sisdr": 23.51597785949707,
+                "sisdr_improvement": -73.24466705322266,
+                "mse": 8.305066330649424e-06,
+                "correlation": 0.9977822132795722
+              },
+              "elimination_metrics": {
+                "target_residual_correlation": 0.303171111822362,
+                "energy_reduction_ratio": 0.9953010659664869,
+                "spectral_difference": 0.6681654446363808
+              },
+              "success": true
+            },
+            {
+              "query": "keyboard sounds",
+              "context": "quiet",
+              "snr_db": null,
+              "separation_metrics": {
+                "sdr": 19.41218983635905,
+                "sdr_improvement": -53.06005250128176,
+                "sisdr": 20.34848928451538,
+                "sisdr_improvement": -76.41215562820435,
+                "mse": 2.0230436348356307e-05,
+                "correlation": 0.995417292778148
+              },
+              "elimination_metrics": {
+                "target_residual_correlation": 0.5318845523072943,
+                "energy_reduction_ratio": 0.9885540949180722,
+                "spectral_difference": 0.5576928469328919
+              },
+              "success": true
+            }
+          ]
+        },
+        {
+          "sound": "keyboard_typing",
+          "context": "quiet",
+          "queries_tested": [
+            "keyboard typing",
+            "typing",
+            "keyboard sounds"
+          ],
+          "evaluations": [
+            {
+              "query": "keyboard typing",
+              "context": "quiet",
+              "snr_db": null,
+              "separation_metrics": {
+                "sdr": 11.731553744563794,
+                "sdr_improvement": -71.42184407469611,
+                "sisdr": 11.592398881912231,
+                "sisdr_improvement": -95.8493983745575,
+                "mse": 0.0013873447896912694,
+                "correlation": 0.9670509232689296
+              },
+              "elimination_metrics": {
+                "target_residual_correlation": 0.4324262137627889,
+                "energy_reduction_ratio": 0.9352431818842888,
+                "spectral_difference": 0.2653071762893412
+              },
+              "success": true
+            },
+            {
+              "query": "typing",
+              "context": "quiet",
+              "snr_db": null,
+              "separation_metrics": {
+                "sdr": 4.019611460846127,
+                "sdr_improvement": -79.13378635841379,
+                "sisdr": 2.614719569683075,
+                "sisdr_improvement": -104.82707768678665,
+                "mse": 0.008191786706447601,
+                "correlation": 0.8038192542037378
+              },
+              "elimination_metrics": {
+                "target_residual_correlation": 0.825145493294038,
+                "energy_reduction_ratio": 0.603718489408493,
+                "spectral_difference": 0.10647362767182378
+              },
+              "success": true
+            },
+            {
+              "query": "keyboard sounds",
+              "context": "quiet",
+              "snr_db": null,
+              "separation_metrics": {
+                "sdr": 11.281334674412427,
+                "sdr_improvement": -71.87206314484749,
+                "sisdr": 11.174277067184448,
+                "sisdr_improvement": -96.26752018928528,
+                "mse": 0.0015388855244964361,
+                "correlation": 0.9638994298267836
+              },
+              "elimination_metrics": {
+                "target_residual_correlation": 0.48405996229339404,
+                "energy_reduction_ratio": 0.9348828345537186,
+                "spectral_difference": 0.24447688724319305
+              },
+              "success": true
+            }
+          ]
+        }
+      ],
+      "single_noise": [
+        {
+          "sound": "keyboard_typing",
+          "context": "single_noise",
+          "queries_tested": [
+            "keyboard typing",
+            "typing",
+            "keyboard sounds"
+          ],
+          "evaluations": []
+        },
+        {
+          "sound": "keyboard_typing",
+          "context": "single_noise",
+          "queries_tested": [
+            "keyboard typing",
+            "typing",
+            "keyboard sounds"
+          ],
+          "evaluations": []
+        }
+      ],
+      "multiple_noises": [
+        {
+          "sound": "keyboard_typing",
+          "context": "multiple_noises",
+          "queries_tested": [
+            "keyboard typing",
+            "typing",
+            "keyboard sounds"
+          ],
+          "evaluations": []
+        },
+        {
+          "sound": "keyboard_typing",
+          "context": "multiple_noises",
+          "queries_tested": [
+            "keyboard typing",
+            "typing",
+            "keyboard sounds"
+          ],
+          "evaluations": []
+        }
+      ]
+    }
+  },
+  {
+    "sound": "water_dripping",
+    "contexts": {
+      "quiet": [
+        {
+          "sound": "water_dripping",
+          "context": "quiet",
+          "queries_tested": [
+            "water dripping",
+            "dripping water",
+            "drip sound"
+          ],
+          "evaluations": [
+            {
+              "query": "water dripping",
+              "context": "quiet",
+              "snr_db": null,
+              "separation_metrics": {
+                "sdr": 1.6803479638913217,
+                "sdr_improvement": -55.1436384199536,
+                "sisdr": -2.965308427810669,
+                "sisdr_improvement": -84.07769322395325,
+                "mse": 3.268615546403453e-05,
+                "correlation": 0.5793516289895334
+              },
+              "elimination_metrics": {
+                "target_residual_correlation": 0.8916585197386576,
+                "energy_reduction_ratio": 0.32089704275131226,
+                "spectral_difference": 0.06710566768010584
+              },
+              "success": true
+            },
+            {
+              "query": "dripping water",
+              "context": "quiet",
+              "snr_db": null,
+              "separation_metrics": {
+                "sdr": 2.217241793468692,
+                "sdr_improvement": -54.60674459037622,
+                "sisdr": -1.5868234634399414,
+                "sisdr_improvement": -82.69920825958252,
+                "mse": 2.8885138817713596e-05,
+                "correlation": 0.640053459718492
+              },
+              "elimination_metrics": {
+                "target_residual_correlation": 0.8439494038717517,
+                "energy_reduction_ratio": 0.39986467361450195,
+                "spectral_difference": 0.11942666772629218
+              },
+              "success": true
+            },
+            {
+              "query": "drip sound",
+              "context": "quiet",
+              "snr_db": null,
+              "separation_metrics": {
+                "sdr": 2.209920647815088,
+                "sdr_improvement": -54.61406573602983,
+                "sisdr": -1.3199350237846375,
+                "sisdr_improvement": -82.43231981992722,
+                "mse": 2.8933873181813397e-05,
+                "correlation": 0.651619399402517
+              },
+              "elimination_metrics": {
+                "target_residual_correlation": 0.8770564396670609,
+                "energy_reduction_ratio": 0.3988567590713501,
+                "spectral_difference": 0.09721782298363268
+              },
+              "success": true
+            }
+          ]
+        },
+        {
+          "sound": "water_dripping",
+          "context": "quiet",
+          "queries_tested": [
+            "water dripping",
+            "dripping water",
+            "drip sound"
+          ],
+          "evaluations": [
+            {
+              "query": "water dripping",
+              "context": "quiet",
+              "snr_db": null,
+              "separation_metrics": {
+                "sdr": 10.518875244903676,
+                "sdr_improvement": -60.566341043038484,
+                "sisdr": 10.366767644882202,
+                "sisdr_improvement": -85.00684380531311,
+                "mse": 0.0001139289524871856,
+                "correlation": 0.9569925177998415
+              },
+              "elimination_metrics": {
+                "target_residual_correlation": 0.49971107816352583,
+                "energy_reduction_ratio": 0.9112704768776894,
+                "spectral_difference": 0.3999611459616702
+              },
+              "success": true
+            },
+            {
+              "query": "dripping water",
+              "context": "quiet",
+              "snr_db": null,
+              "separation_metrics": {
+                "sdr": 10.56699448931212,
+                "sdr_improvement": -60.51822179863004,
+                "sisdr": 10.61298131942749,
+                "sisdr_improvement": -84.76063013076782,
+                "mse": 0.00011267360241618007,
+                "correlation": 0.9592198040627364
+              },
+              "elimination_metrics": {
+                "target_residual_correlation": 0.5567589339691174,
+                "energy_reduction_ratio": 0.9122491553425789,
+                "spectral_difference": 0.3636313245521924
+              },
+              "success": true
+            },
+            {
+              "query": "drip sound",
+              "context": "quiet",
+              "snr_db": null,
+              "separation_metrics": {
+                "sdr": 4.78641993212459,
+                "sdr_improvement": -66.29879635581757,
+                "sisdr": 3.457764685153961,
+                "sisdr_improvement": -91.91584676504135,
+                "mse": 0.0004264613089617342,
+                "correlation": 0.8301563633500983
+              },
+              "elimination_metrics": {
+                "target_residual_correlation": 0.7496687269043211,
+                "energy_reduction_ratio": 0.6678567826747894,
+                "spectral_difference": 0.17640749410976453
+              },
+              "success": true
+            }
+          ]
+        }
+      ],
+      "single_noise": [
+        {
+          "sound": "water_dripping",
+          "context": "single_noise",
+          "queries_tested": [
+            "water dripping",
+            "dripping water",
+            "drip sound"
+          ],
+          "evaluations": []
+        },
+        {
+          "sound": "water_dripping",
+          "context": "single_noise",
+          "queries_tested": [
+            "water dripping",
+            "dripping water",
+            "drip sound"
+          ],
+          "evaluations": []
+        }
+      ],
+      "multiple_noises": [
+        {
+          "sound": "water_dripping",
+          "context": "multiple_noises",
+          "queries_tested": [
+            "water dripping",
+            "dripping water",
+            "drip sound"
+          ],
+          "evaluations": []
+        },
+        {
+          "sound": "water_dripping",
+          "context": "multiple_noises",
+          "queries_tested": [
+            "water dripping",
+            "dripping water",
+            "drip sound"
+          ],
+          "evaluations": []
+        }
+      ]
+    }
+  },
+  {
+    "sound": "dog_barking",
+    "contexts": {
+      "quiet": [],
+      "single_noise": [],
+      "multiple_noises": []
+    }
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "chewing": [
+    "test_samples/triggering_sounds/chewing/chewing_000.wav",
+    "test_samples/triggering_sounds/chewing/chewing_001.wav"
+  ],
+  "keyboard_typing": [
+    "test_samples/triggering_sounds/keyboard_typing/keyboard_typing_000.wav",
+    "test_samples/triggering_sounds/keyboard_typing/keyboard_typing_001.wav"
+  ],
+  "dog_barking": [],
+  "snoring": [
+    "test_samples/triggering_sounds/snoring/snoring_000.wav",
+    "test_samples/triggering_sounds/snoring/snoring_001.wav"
+  ],
+  "water_dripping": [
+    "test_samples/triggering_sounds/water_dripping/water_dripping_000.wav",
+    "test_samples/triggering_sounds/water_dripping/water_dripping_001.wav"
+  ]
+}

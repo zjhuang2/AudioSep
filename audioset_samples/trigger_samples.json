@@ -1,0 +1,141 @@
+{
+  "chewing": [
+    "audioset_samples/triggering_sounds/chewing/chewing_002.wav",
+    "audioset_samples/triggering_sounds/chewing/chewing_003.wav",
+    "audioset_samples/triggering_sounds/chewing/chewing_004.wav"
+  ],
+  "sniffing": [
+    "audioset_samples/triggering_sounds/sniffing/sniffing_001.wav",
+    "audioset_samples/triggering_sounds/sniffing/sniffing_002.wav",
+    "audioset_samples/triggering_sounds/sniffing/sniffing_003.wav",
+    "audioset_samples/triggering_sounds/sniffing/sniffing_004.wav"
+  ],
+  "heavy_breathing": [
+    "audioset_samples/triggering_sounds/heavy_breathing/heavy_breathing_000.wav",
+    "audioset_samples/triggering_sounds/heavy_breathing/heavy_breathing_001.wav",
+    "audioset_samples/triggering_sounds/heavy_breathing/heavy_breathing_002.wav",
+    "audioset_samples/triggering_sounds/heavy_breathing/heavy_breathing_003.wav",
+    "audioset_samples/triggering_sounds/heavy_breathing/heavy_breathing_004.wav",
+    "audioset_samples/triggering_sounds/heavy_breathing/heavy_breathing_006.wav",
+    "audioset_samples/triggering_sounds/heavy_breathing/heavy_breathing_008.wav",
+    "audioset_samples/triggering_sounds/heavy_breathing/heavy_breathing_009.wav"
+  ],
+  "snoring": [
+    "audioset_samples/triggering_sounds/snoring/snoring_000.wav",
+    "audioset_samples/triggering_sounds/snoring/snoring_001.wav",
+    "audioset_samples/triggering_sounds/snoring/snoring_003.wav",
+    "audioset_samples/triggering_sounds/snoring/snoring_004.wav"
+  ],
+  "throat_clearing": [
+    "audioset_samples/triggering_sounds/throat_clearing/throat_clearing_000.wav",
+    "audioset_samples/triggering_sounds/throat_clearing/throat_clearing_002.wav",
+    "audioset_samples/triggering_sounds/throat_clearing/throat_clearing_003.wav",
+    "audioset_samples/triggering_sounds/throat_clearing/throat_clearing_004.wav"
+  ],
+  "pen_clicking": [
+    "audioset_samples/triggering_sounds/pen_clicking/pen_clicking_000.wav",
+    "audioset_samples/triggering_sounds/pen_clicking/pen_clicking_001.wav",
+    "audioset_samples/triggering_sounds/pen_clicking/pen_clicking_002.wav",
+    "audioset_samples/triggering_sounds/pen_clicking/pen_clicking_003.wav",
+    "audioset_samples/triggering_sounds/pen_clicking/pen_clicking_004.wav"
+  ],
+  "keyboard_typing": [
+    "audioset_samples/triggering_sounds/keyboard_typing/keyboard_typing_000.wav",
+    "audioset_samples/triggering_sounds/keyboard_typing/keyboard_typing_001.wav",
+    "audioset_samples/triggering_sounds/keyboard_typing/keyboard_typing_002.wav",
+    "audioset_samples/triggering_sounds/keyboard_typing/keyboard_typing_004.wav",
+    "audioset_samples/triggering_sounds/keyboard_typing/keyboard_typing_005.wav",
+    "audioset_samples/triggering_sounds/keyboard_typing/keyboard_typing_006.wav",
+    "audioset_samples/triggering_sounds/keyboard_typing/keyboard_typing_007.wav",
+    "audioset_samples/triggering_sounds/keyboard_typing/keyboard_typing_009.wav"
+  ],
+  "finger_tapping": [
+    "audioset_samples/triggering_sounds/finger_tapping/finger_tapping_000.wav",
+    "audioset_samples/triggering_sounds/finger_tapping/finger_tapping_001.wav",
+    "audioset_samples/triggering_sounds/finger_tapping/finger_tapping_002.wav",
+    "audioset_samples/triggering_sounds/finger_tapping/finger_tapping_003.wav"
+  ],
+  "foot_tapping": [
+    "audioset_samples/triggering_sounds/foot_tapping/foot_tapping_000.wav",
+    "audioset_samples/triggering_sounds/foot_tapping/foot_tapping_001.wav",
+    "audioset_samples/triggering_sounds/foot_tapping/foot_tapping_003.wav",
+    "audioset_samples/triggering_sounds/foot_tapping/foot_tapping_004.wav"
+  ],
+  "clock_ticking": [
+    "audioset_samples/triggering_sounds/clock_ticking/clock_ticking_000.wav",
+    "audioset_samples/triggering_sounds/clock_ticking/clock_ticking_001.wav",
+    "audioset_samples/triggering_sounds/clock_ticking/clock_ticking_002.wav",
+    "audioset_samples/triggering_sounds/clock_ticking/clock_ticking_003.wav",
+    "audioset_samples/triggering_sounds/clock_ticking/clock_ticking_004.wav",
+    "audioset_samples/triggering_sounds/clock_ticking/clock_ticking_005.wav",
+    "audioset_samples/triggering_sounds/clock_ticking/clock_ticking_006.wav",
+    "audioset_samples/triggering_sounds/clock_ticking/clock_ticking_007.wav",
+    "audioset_samples/triggering_sounds/clock_ticking/clock_ticking_008.wav",
+    "audioset_samples/triggering_sounds/clock_ticking/clock_ticking_009.wav"
+  ],
+  "water_dripping": [
+    "audioset_samples/triggering_sounds/water_dripping/water_dripping_000.wav",
+    "audioset_samples/triggering_sounds/water_dripping/water_dripping_001.wav",
+    "audioset_samples/triggering_sounds/water_dripping/water_dripping_002.wav",
+    "audioset_samples/triggering_sounds/water_dripping/water_dripping_003.wav",
+    "audioset_samples/triggering_sounds/water_dripping/water_dripping_004.wav",
+    "audioset_samples/triggering_sounds/water_dripping/water_dripping_005.wav",
+    "audioset_samples/triggering_sounds/water_dripping/water_dripping_006.wav",
+    "audioset_samples/triggering_sounds/water_dripping/water_dripping_008.wav",
+    "audioset_samples/triggering_sounds/water_dripping/water_dripping_009.wav"
+  ],
+  "dog_barking": [
+    "audioset_samples/triggering_sounds/dog_barking/dog_barking_000.wav",
+    "audioset_samples/triggering_sounds/dog_barking/dog_barking_001.wav",
+    "audioset_samples/triggering_sounds/dog_barking/dog_barking_002.wav",
+    "audioset_samples/triggering_sounds/dog_barking/dog_barking_004.wav",
+    "audioset_samples/triggering_sounds/dog_barking/dog_barking_005.wav",
+    "audioset_samples/triggering_sounds/dog_barking/dog_barking_006.wav",
+    "audioset_samples/triggering_sounds/dog_barking/dog_barking_007.wav",
+    "audioset_samples/triggering_sounds/dog_barking/dog_barking_008.wav",
+    "audioset_samples/triggering_sounds/dog_barking/dog_barking_009.wav"
+  ],
+  "baby_crying": [
+    "audioset_samples/triggering_sounds/baby_crying/baby_crying_000.wav",
+    "audioset_samples/triggering_sounds/baby_crying/baby_crying_003.wav",
+    "audioset_samples/triggering_sounds/baby_crying/baby_crying_005.wav",
+    "audioset_samples/triggering_sounds/baby_crying/baby_crying_006.wav",
+    "audioset_samples/triggering_sounds/baby_crying/baby_crying_007.wav",
+    "audioset_samples/triggering_sounds/baby_crying/baby_crying_008.wav",
+    "audioset_samples/triggering_sounds/baby_crying/baby_crying_009.wav"
+  ],
+  "phone_notification": [
+    "audioset_samples/triggering_sounds/phone_notification/phone_notification_000.wav",
+    "audioset_samples/triggering_sounds/phone_notification/phone_notification_001.wav",
+    "audioset_samples/triggering_sounds/phone_notification/phone_notification_002.wav",
+    "audioset_samples/triggering_sounds/phone_notification/phone_notification_003.wav",
+    "audioset_samples/triggering_sounds/phone_notification/phone_notification_004.wav",
+    "audioset_samples/triggering_sounds/phone_notification/phone_notification_006.wav",
+    "audioset_samples/triggering_sounds/phone_notification/phone_notification_008.wav",
+    "audioset_samples/triggering_sounds/phone_notification/phone_notification_009.wav"
+  ],
+  "buzzing": [
+    "audioset_samples/triggering_sounds/buzzing/buzzing_000.wav",
+    "audioset_samples/triggering_sounds/buzzing/buzzing_002.wav",
+    "audioset_samples/triggering_sounds/buzzing/buzzing_003.wav",
+    "audioset_samples/triggering_sounds/buzzing/buzzing_004.wav",
+    "audioset_samples/triggering_sounds/buzzing/buzzing_005.wav",
+    "audioset_samples/triggering_sounds/buzzing/buzzing_006.wav",
+    "audioset_samples/triggering_sounds/buzzing/buzzing_007.wav",
+    "audioset_samples/triggering_sounds/buzzing/buzzing_008.wav",
+    "audioset_samples/triggering_sounds/buzzing/buzzing_009.wav"
+  ],
+  "vacuum_cleaner": [
+    "audioset_samples/triggering_sounds/vacuum_cleaner/vacuum_cleaner_000.wav",
+    "audioset_samples/triggering_sounds/vacuum_cleaner/vacuum_cleaner_001.wav",
+    "audioset_samples/triggering_sounds/vacuum_cleaner/vacuum_cleaner_002.wav",
+    "audioset_samples/triggering_sounds/vacuum_cleaner/vacuum_cleaner_003.wav",
+    "audioset_samples/triggering_sounds/vacuum_cleaner/vacuum_cleaner_004.wav"
+  ],
+  "lawn_mower": [
+    "audioset_samples/triggering_sounds/lawn_mower/lawn_mower_000.wav",
+    "audioset_samples/triggering_sounds/lawn_mower/lawn_mower_001.wav",
+    "audioset_samples/triggering_sounds/lawn_mower/lawn_mower_003.wav",
+    "audioset_samples/triggering_sounds/lawn_mower/lawn_mower_004.wav"
+  ]
+}

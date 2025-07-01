@@ -1,0 +1,40 @@
+{
+  "background conversation": [
+    "audioset_samples/background_noises/background_conversation/background_conversation_001.wav",
+    "audioset_samples/background_noises/background_conversation/background_conversation_002.wav",
+    "audioset_samples/background_noises/background_conversation/background_conversation_003.wav",
+    "audioset_samples/background_noises/background_conversation/background_conversation_004.wav",
+    "audioset_samples/background_noises/background_conversation/background_conversation_005.wav",
+    "audioset_samples/background_noises/background_conversation/background_conversation_007.wav"
+  ],
+  "traffic noise": [
+    "audioset_samples/background_noises/traffic_noise/traffic_noise_000.wav",
+    "audioset_samples/background_noises/traffic_noise/traffic_noise_001.wav",
+    "audioset_samples/background_noises/traffic_noise/traffic_noise_003.wav",
+    "audioset_samples/background_noises/traffic_noise/traffic_noise_004.wav",
+    "audioset_samples/background_noises/traffic_noise/traffic_noise_005.wav"
+  ],
+  "office ambience": [
+    "audioset_samples/background_noises/office_ambience/office_ambience_000.wav",
+    "audioset_samples/background_noises/office_ambience/office_ambience_001.wav",
+    "audioset_samples/background_noises/office_ambience/office_ambience_002.wav"
+  ],
+  "cafe ambience": [
+    "audioset_samples/background_noises/cafe_ambience/cafe_ambience_000.wav",
+    "audioset_samples/background_noises/cafe_ambience/cafe_ambience_001.wav",
+    "audioset_samples/background_noises/cafe_ambience/cafe_ambience_002.wav"
+  ],
+  "street noise": [
+    "audioset_samples/background_noises/street_noise/street_noise_000.wav",
+    "audioset_samples/background_noises/street_noise/street_noise_001.wav",
+    "audioset_samples/background_noises/street_noise/street_noise_002.wav"
+  ],
+  "crowd noise": [
+    "audioset_samples/background_noises/crowd_noise/crowd_noise_000.wav",
+    "audioset_samples/background_noises/crowd_noise/crowd_noise_001.wav",
+    "audioset_samples/background_noises/crowd_noise/crowd_noise_002.wav",
+    "audioset_samples/background_noises/crowd_noise/crowd_noise_003.wav",
+    "audioset_samples/background_noises/crowd_noise/crowd_noise_004.wav",
+    "audioset_samples/background_noises/crowd_noise/crowd_noise_005.wav"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "background conversation": [
+    "test_samples/background_noises/crowd_noise/crowd_noise_000.wav",
+    "test_samples/background_noises/crowd_noise/crowd_noise_001.wav"
+  ],
+  "traffic noise": [
+    "test_samples/background_noises/traffic_noise/traffic_noise_000.wav",
+    "test_samples/background_noises/traffic_noise/traffic_noise_001.wav"
+  ],
+  "office ambience": [
+    "test_samples/background_noises/crowd_noise/crowd_noise_000.wav"
+  ],
+  "cafe ambience": [
+    "test_samples/background_noises/crowd_noise/crowd_noise_001.wav"
+  ],
+  "street noise": [
+    "test_samples/background_noises/traffic_noise/traffic_noise_000.wav"
+  ],
+  "crowd noise": [
+    "test_samples/background_noises/crowd_noise/crowd_noise_000.wav",
+    "test_samples/background_noises/crowd_noise/crowd_noise_001.wav"
+  ]
+}

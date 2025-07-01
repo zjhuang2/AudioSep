@@ -1,6 +1,6 @@
 from typing import Any, Callable, Dict
 import random
-import lightning.pytorch as pl
+import pytorch_lightning as pl
 import torch
 import torch.nn as nn
 import torch.optim as optim
